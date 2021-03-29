@@ -14,6 +14,9 @@ export default makeStyles((theme) => ({
 		flexWrap: 'wrap',
 		justifyContent: 'center',
 	},
+	textfield: {
+		margin: '5px 0',
+	},
 	fileInput: {
 		width: '97%',
 		margin: '10px 0',
