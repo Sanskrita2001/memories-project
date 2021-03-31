@@ -33,15 +33,16 @@ function App() {
 				<Container>
 					<Grid
 						container
+						className={classes.mainContainer}
 						justify='space-between'
 						alignItems='stretch'
 						spacing={3}
 					>
 						<Grid item xs={12} sm={7}>
-							<Posts setCurrentID={setCurrentID}/>
+							<Posts setCurrentID={setCurrentID} />
 						</Grid>
 						<Grid item xs={12} sm={4}>
-							<Form currentID={ currentID} setCurrentID={setCurrentID}/>
+							<Form currentID={currentID} setCurrentID={setCurrentID} />
 						</Grid>
 					</Grid>
 				</Container>
