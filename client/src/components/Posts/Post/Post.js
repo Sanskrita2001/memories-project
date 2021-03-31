@@ -12,8 +12,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
 import useStyles from './Style';
-import { useDispatch } from "react-redux";
-import { deletePost,likePost } from "../../../actions/posts";
+import { useDispatch } from 'react-redux';
+import { deletePost, likePost } from '../../../actions/posts';
 
 const Post = ({ post, setCurrentID }) => {
 	const dispatch = useDispatch();
@@ -51,16 +51,33 @@ const Post = ({ post, setCurrentID }) => {
 				{post.title}
 			</Typography>
 			<CardContent>
-				<Typography variant='h5' gutterBottom>
+				<Typography
+					variant='body2'
+					component='p'
+					color='textSecondary'
+					gutterBottom
+				>
 					{post.message}
 				</Typography>
 			</CardContent>
 			<CardActions className={classes.cardActions}>
-				<Button size='small' color='primary' onClick={() => {dispatch(likePost(post._id));}}>
+				<Button
+					size='small'
+					color='primary'
+					onClick={() => {
+						dispatch(likePost(post._id));
+					}}
+				>
 					<ThumbUpAltIcon fontSize='small' />
-					Like {post.likeCount}
+					&nbsp; Like &nbsp; {post.likeCount}
 				</Button>
-				<Button size='small' color='primary' onClick={() => {dispatch(deletePost(post._id))}}>
+				<Button
+					size='small'
+					color='primary'
+					onClick={() => {
+						dispatch(deletePost(post._id));
+					}}
+				>
 					<DeleteIcon fontSize='small' />
 					Delete
 				</Button>
